@@ -4,9 +4,36 @@
    Author's custom styles
    ========================================================================== */
 
+body {
+        padding-top: 15px;
+        padding-bottom: 40px;
+    }
 
+.fullHeight {
+	height: 100%;
+	width:100%;
+}
 
+.brandFontSize {
+	font-size: 44px;
+	font-weight: bold;
+	color:#2f96b4;
+	margin-right:17px;
+}
 
+.brandFontSize .brand{
+	text-decoration: none
+}
+
+.brandFontSize a.brand:hover{
+	color: #49afcd;
+}
+
+.mapContainer{
+	margin-top: 40px;
+	height: 600px;
+	width: 850px;
+}
 
 
 
