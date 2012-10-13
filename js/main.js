@@ -16,6 +16,18 @@ window.imgT = {
 		    zoom: 3
 		});
 		map.addLayer(layer);
+		if(navigator.geolocation) navigator.geolocation.getCurrentPosition(imgT.locateWithCoords, imgT.locateErr)
+	},
+	locateWithCoords: function(pos){
+		var self = imgT;
+		var lat = pos.coords.latitude, lon = pos.coords.longitude;
+		var loc = new L.LatLng(lat, lon);
+		var marker = new L.Marker(loc);
+		self.map.addLayer(marker);
+		self.map.setView(new L.LatLng(lat, lon), 2);
+	},
+	locateErr: function(){
+		//IP fallback
 	},
 	placesAutoComplete: function(){
 		$("#geocomplete").geocomplete({

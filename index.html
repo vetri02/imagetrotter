@@ -12,8 +12,8 @@
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="http://leaflet.cloudmade.com/dist/leaflet.css" />
-        <!--[if lte IE 8]><link rel="stylesheet" href="http://leaflet.cloudmade.com/dist/leaflet.ie.css" /><![endif]-->
+        <link rel="stylesheet" href="css/leaflet.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/leaflet.ie.css" /><![endif]-->
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
@@ -25,17 +25,25 @@
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-            <div class="">
+           
                 <div class="container">
-                    <p class="lead brandFontSize"><a class="brand pull-right" href="#">Image Trotter</a></p>
+                    
+                    <p class="lead brandFontSize clearfix"><a class="brand pull-right" href="#">Image Trotter</a></p>
+
+                    
+                        <ul class="nav nav-pills">
+                          <li class="active"><a href="#">Post Moments</a></li>
+                          <li><a href="#">Share Moments</a></li>
+                        </ul>
+                     
                 </div>
-            </div>
+            
 
         <div class="container">
           <div class="row">
             <div class="span3 grey">
                 <form class="form-horizontal" id="detailsForm">
-                  <legend>Post Details</legend>
+                  <legend>Post Moments</legend>
                   <div class="well">
                         <label><strong>Name</strong></label>
                         <input type="text" name="userName" placeholder="Name">
@@ -46,16 +54,15 @@
                       <input type="hidden"  data-geo="location" name="placeLatLon" value="">
                       <input type="hidden" data-geo="locality" name="placeCity" value="">
                       <input type="hidden" data-geo="country_short" name="placeCountryShort" value="">
-                      <input type="hidden" data-geo="administrative_area_level_1" name="placeState" value="">
+                      <input type="hidden" data-geo="administrative_area_level_1" name="placeAdministrativeArea" value="">
                  </div>
                  <div class="well">
                         <label><strong>Image Path</strong></label>
-                        <input type="text" name="picPath" placeholder="path">
+                        <input type="file" name="picPath" placeholder="path">
                   </div>
                   <div class="well">
-                  <label class="checkbox">
-                    <input type="checkbox"> Share Location
-                  </label>
+                    <label><strong>Memories</strong></label>
+                    <textarea name="comment"></textarea>
                   </div>
                   <button type="submit" class="btn btn-info">Submit</button>
                 </form>
@@ -66,14 +73,10 @@
           </div>
         </div> <!-- /container -->
         <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-
+        <script src="js/vendor/jquery-1.8.2.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script type="text/javascript" src="http://leaflet.cloudmade.com/dist/leaflet.js"></script>
-        
+        <script type="text/javascript" src="js/mapVendor/leaflet/leaflet.js"></script>
         <script type="text/javascript" src="js/mapVendor/jquery.geocomplete.min.js"></script>
-
         <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.0"></script>
         <script src="js/main.js"></script>
 
