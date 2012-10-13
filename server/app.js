@@ -1,8 +1,14 @@
 var express = require("express"),
     app     = express();
-    
+
+app.use(express.bodyParser());
+
 app.get("/", function(req, res) {
   res.redirect("/index.html");
+});
+
+app.post('/postData', function(req, res){
+    console.log(req.body);
 });
 
 app.configure(function(){
